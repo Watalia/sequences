@@ -28,12 +28,12 @@
 <ul>
   <li>1,2,3 Yes!</li>
   <% if  @user_first_number && @user_second_number && @user_third_number != ""%>
-        <li><%=@user_first_number%>,<%=@user_second_number%>,<%=@user_third_number%>
-          <% if @user_second_number > @user_first_number %>
-            Yes!
+        <li><%=@user_first_number%>, <%=@user_second_number%>, <%=@user_third_number%>
+        <!--  <% if @user_second_number > @user_first_number %>
+          Yes!
             <% else %>
             No!
-          <% end %>
+          <% end %> -->
         </li>
   <% end %>
 
@@ -44,7 +44,7 @@
   Enter a sequence:
 </p>
 
-<form action="http://localhost:3000">
+<form action="http://localhost:3000/all_guesses ">
   <label for="first">First number:</label>
   <input id="first" name="first" type="text" placeholder="The first number">
   <label for="second">Second number:</label>
