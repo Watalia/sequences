@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027211721) do
+ActiveRecord::Schema.define(version: 20161028234138) do
 
   create_table "guesses", force: :cascade do |t|
     t.integer  "first_num"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20161027211721) do
     t.integer  "third_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "outcome"
   end
 
 end
