@@ -19,23 +19,31 @@
 
 <ul>
   <li>2, 4, 8 Obeys the rule</li>
-</ul>
 
+</ul>
 <p>
   Now it’s your turn. Enter a number sequence in the boxes below, and we’ll tell you whether it satisfies the rule or not. You can test as many sequences as you want.
 </p>
 
 <ul>
-  <li>1,2,3 Yes!</li>
-  <% if  @user_first_number && @user_second_number && @user_third_number != ""%>
+
+  <%= @list.each do |guess|%>
+    <li>
+    <%= guess.first_num %>,
+    <%= guess.second_num %>,
+    <%= guess.third_num %>
+    </li>
+   <% end %>
+
+  <!-- <% if  @user_first_number && @user_second_number && @user_third_number != ""%>
         <li><%=@user_first_number%>, <%=@user_second_number%>, <%=@user_third_number%>
-        <!--  <% if @user_second_number > @user_first_number %>
+         <% if @user_second_number > @user_first_number %>
           Yes!
             <% else %>
             No!
-          <% end %> -->
+          <% end %>
         </li>
-  <% end %>
+  <% end %> -->
 
 </ul>
 

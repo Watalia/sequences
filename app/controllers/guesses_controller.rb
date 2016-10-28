@@ -6,6 +6,14 @@ class GuessesController < ApplicationController
     @user_second_number=params["second"]
     @user_third_number=params["third"]
 
+    @list = Guess.all
+
+    g=Guess.new
+    g.first_num = @user_first_number
+    g.second_num = @user_first_number
+    g.third_num = @user_first_number
+    g.save
+
     render("index.html.erb")
   end
 
