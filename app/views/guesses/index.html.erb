@@ -34,8 +34,10 @@
     <%= guess.third_num %>
     </li>
    <% end %>
+</ul>
 
-  <!-- <% if  @user_first_number && @user_second_number && @user_third_number != ""%>
+
+  <% if  @user_first_number && @user_second_number && @user_third_number != ""%>
         <li><%=@user_first_number%>, <%=@user_second_number%>, <%=@user_third_number%>
          <% if @user_second_number > @user_first_number %>
           Yes!
@@ -43,16 +45,13 @@
             No!
           <% end %>
         </li>
-  <% end %> -->
-
-</ul>
-
+  <% end %>
 
 <p>
   Enter a sequence:
 </p>
 
-<form action="http://localhost:3000/all_guesses ">
+<form action="http://localhost:3000/all_guesses">
   <label for="first">First number:</label>
   <input id="first" name="first" type="text" placeholder="The first number">
   <label for="second">Second number:</label>

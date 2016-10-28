@@ -10,8 +10,8 @@ class GuessesController < ApplicationController
 
     g=Guess.new
     g.first_num = @user_first_number
-    g.second_num = @user_first_number
-    g.third_num = @user_first_number
+    g.second_num = @user_second_number
+    g.third_num = @user_third_number
     g.save
 
     render("index.html.erb")
