@@ -27,20 +27,21 @@
 
 <ul>
 
-<%= @list.each do |guess|%>
-    <li>
+  <% @list.each do |guess|%>
+  <li>
     <%= guess.first_num %>,
     <%= guess.second_num %>,
     <%= guess.third_num %>
-    </li>
-  <% end %>
-  <% if @user_second_number && @user_first_number && @user_third_number != " " %>
-      <% if @user_second_number > @user_first_number %>
-          <%=  @outcome = "Yes!" %>
-      <% else %>
-          <%=  @outcome = "No." %>
-      <% end %>
-  <% end %>
+
+    <% if guess.second_num && guess.first_num && guess.third_num != " " %>
+    <% if guess.second_num > guess.first_num && guess.third_num > guess.second_num %>
+    <%=  @outcome = "Yes!" %>
+    <% else %>
+    <%=  @outcome = "No." %>
+    <% end %>
+    <% end %>
+    <% end %>
+  </li>
 </ul>
 
 <p>
